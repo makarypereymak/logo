@@ -1,0 +1,132 @@
+.selectCustom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+@media (hover: hover) {
+  .selectCustom {
+    display: block;
+  }
+
+  .selectNative:focus + .selectCustom {
+    display: none;
+  }
+}
+
+.select {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.selectLabel {
+  display: block;
+  font-weight: bold;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectNative,
+.selectCustom-trigger {
+  position: relative;
+  box-sizing: border-box;
+  width: 287px;
+  height: 38px;
+  padding-top: 8px;
+  color: #9f9f9f;
+  font-size: 16px;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #9f9f9f;
+
+  @media (min-width: 1200px) {
+    width: 505px;
+  }
+}
+
+.selectNative {
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 0.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.selectCustom-trigger {
+  position: relative;
+  width: 287px;
+  height: 38px;
+  color: #9f9f9f;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #9f9f9f;
+
+  @media (min-width: 1200px) {
+    width: 505px;
+  }
+}
+
+.selectCustom-trigger::after {
+  position: absolute;
+  top: 9px;
+  right: 4px;
+  width: 16px;
+  height: 9px;
+  line-height: 3.8rem;
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  content: "";
+}
+
+.selectCustom-options {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  color: #9f9f9f;
+  background-color: #ffffff;
+  border: 1px solid #9f9f9f;
+  border-top: none;
+  box-shadow: 0 0 4px #e9e1f8;
+}
+
+.selectCustom.isActive .selectCustom-options {
+  display: block;
+}
+
+.selectCustom-option {
+  position: relative;
+  padding: 20px 0 0 20px;
+}
+
+.selectCustom-option:last-child {
+  padding-bottom: 20px;
+}
+
+.selectCustom-option.isActive {
+  color: #000000;
+}
+
+.selectCustom-trigger--active {
+  position: relative;
+  color: #000000;
+}
+
+.selectCustom-trigger--active::before {
+  position: absolute;
+  top: -9px;
+  color: #9f9f9f;
+  font-size: 12px;
+  content: "Тип упаковки";
+}
+
+.selectCustom-trigger--invalid {
+  border-color: #d80909;
+}

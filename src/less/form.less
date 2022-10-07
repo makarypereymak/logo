@@ -1,0 +1,144 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.form__label {
+  display: none;
+}
+
+.form__map {
+  width: 287px;
+  height: 200px;
+  margin-bottom: 39px;
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    top: 68px;
+    right: -555px;
+    width: 555px;
+    height: 700px;
+  }
+}
+
+.form__input {
+  position: relative;
+  width: 287px;
+  height: 38px;
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #9f9f9f;
+
+  @media (min-width: 1200px) {
+    width: 505px;
+  }
+}
+
+.form__input:invalid {
+  color: #d80909;
+  border-bottom: 1px solid #d80909;
+}
+
+.form__input--invalid {
+  border-bottom: 1px solid #d80909;
+}
+
+.form__focus {
+  display: none;
+}
+
+.form__input::placeholder {
+  color: #9f9f9f;
+  font-size: 16px;
+}
+
+.form__input:focus {
+  color: #000000;
+  outline: none;
+}
+
+.form__input:focus::placeholder {
+  color: #ffffff;
+  outline: none;
+}
+
+.form__input:focus + .form__focus {
+  position: absolute;
+  top: -9px;
+  display: block;
+  color: #9f9f9f;
+  font-size: 16px;
+}
+
+.form__element-wrapper {
+  position: relative;
+}
+
+.form__invalid-text {
+  display: none;
+}
+
+.form__input:invalid + .form__focus {
+  display: none;
+}
+
+.form__input:invalid ~ .form__invalid-text {
+  position: absolute;
+  top: -9px;
+  display: block;
+  color: #d80909;
+  font-size: 12px;
+}
+
+.form__input:valid ~ .form__invalid-text {
+  display: none;
+}
+
+.form__input:required ~ .form__invalid-text {
+  display: none;
+}
+
+.form__input--name {
+  @media (min-width: 1200px) {
+    width: 235px;
+    margin-right: 35px;
+  }
+}
+
+.form__input--phone {
+  @media (min-width: 1200px) {
+    width: 235px;
+  }
+}
+
+.form__buy-btn {
+  width: 288px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: inherit;
+  border: 1px solid #000000;
+  cursor: pointer;
+
+  @media (min-width: 1200px) {
+    width: 505px;
+    height: 70px;
+  }
+}
+
+.form__buy-btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.form__option-group {
+  border: 1px solid #9f9f9f;
+}
+
+.form__option {
+  min-height: 101px;
+  color: #9f9f9f;
+}

@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "autoprefixer": "10.4.0",
+    "gulp": "4.0.2",
+    "gulp-less": "5.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-rename": "2.0.0",
+    "postcss-csso": "5.0.1",
+    "stylelint": "^14.13.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-less": "^1.0.6",
+    "stylelint-order": "^5.0.0"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "type": "module",
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp-terser": "^2.1.0"
+  }
+}

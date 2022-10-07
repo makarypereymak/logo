@@ -1,0 +1,140 @@
+.header {
+  box-sizing: border-box;
+  max-width: 310px;
+  margin: 0 auto;
+  padding: 17px 16px;
+
+  @media (min-width: 1200px) {
+    max-width: 1142px;
+    padding: 33px 16px;
+  }
+}
+
+.header__favorites {
+  width: 24px;
+  height: 22px;
+  margin-right: 16px;
+  background-color: inherit;
+  background-image: url("../images/heart.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: 1200px) {
+    width: 28px;
+    height: 25px;
+    background-size: 28px 25px;
+  }
+}
+
+.header__profile {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+    width: 22px;
+    height: 25px;
+    margin-right: 22px;
+    margin-left: auto;
+    background-image: url("../images/profile.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 25px;
+  }
+}
+
+.header__basket {
+  display: block;
+  width: 31px;
+  height: 26px;
+  background-image: url("../images/basket.svg");
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+
+  @media (min-width: 1200px) {
+    height: 29px;
+    background-size: 31px 29px;
+  }
+}
+
+.header__wrapper-for-search {
+  display: flex;
+  margin-right: 42px;
+}
+
+.header__search-btn {
+  width: 22px;
+  height: 22px;
+  background-color: inherit;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: 1200px) {
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+  }
+}
+
+.navigation__svg-logo {
+  width: 74px;
+  height: 24px;
+  margin-right: 34px;
+}
+
+.header__list {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: flex;
+    margin-top: 70px;
+  }
+}
+
+.header__item:not(:last-child):not(:nth-child(3)) {
+  margin-right: 30px;
+}
+
+.header__item:nth-child(3) {
+  margin-right: 288px;
+}
+
+.header__link {
+  display: block;
+  min-width: 117px;
+  color: #9f9f9f;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: #000000;
+}
+
+.header__search-input {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+    width: 250px;
+    margin-left: 20px;
+    color: #000000;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #9f9f9f;
+  }
+}
+
+.header__search-input::placeholder {
+  color: #9f9f9f;
+  font-size: 18px;
+}
+
+.header__search-input:focus {
+  color: #000000;
+  outline: none;
+}

@@ -1,0 +1,246 @@
+{
+  "extends": ["stylelint-config-rational-order"],
+  "plugins": ["stylelint-order", "stylelint-less"],
+  "overrides": [
+    {
+      "files": ["**/*.less"],
+      "rules": {
+        "no-eol-whitespace": [
+          true,
+          {
+            "message": "В конце строки пробелов быть не должно"
+          }
+        ],
+        "indentation": [
+          2,
+          {
+            "message": "2 пробела отступ быть должен"
+          }
+        ],
+        "string-quotes": [
+          "double",
+          {
+            "message": "Кавычки двойные в стилях на проекте у нас"
+          }
+        ],
+        "length-zero-no-unit": [
+          true,
+          {
+            "message": "Нулю не нужны измерения единицы"
+          }
+        ],
+        "font-family-name-quotes": [
+          "always-unless-keyword",
+          {
+            "message": "В кавычки шрифта название брать следует"
+          }
+        ],
+        "max-empty-lines": [
+          1,
+          {
+            "message": "Максимум линий пустых допустимо: 1"
+          }
+        ],
+        "rule-empty-line-before": [
+          "always",
+          {
+            "message": "Селекторы должны быть отделены линией",
+            "except": ["first-nested"],
+            "ignore": ["after-comment"]
+          }
+        ],
+        "no-missing-end-of-source-newline": [
+          true,
+          {
+            "message": "Файл должен заканичваться пустой строкой"
+          }
+        ],
+
+        "at-rule-name-space-after": [
+          "always-single-line",
+          {
+            "message": "После @-правила пробел ставить следует"
+          }
+        ],
+        "at-rule-semicolon-newline-after": [
+          "always",
+          {
+            "message": "В @-правилах после ; новая строка быть должна"
+          }
+        ],
+        "at-rule-empty-line-before": [
+          "always",
+          {
+            "message": "Вложенные медиа-запросы должны быть отделены линией",
+            "except": ["first-nested", "blockless-after-blockless"],
+            "ignore": ["after-comment"]
+          }
+        ],
+        "at-rule-name-case": [
+          "lower",
+          {
+            "message": "@-правила буквами строчными набирать следует"
+          }
+        ],
+
+        "color-named": [
+          "never",
+          {
+            "message": "Цвета ключевыми словами нельзя писать"
+          }
+        ],
+        "color-hex-case": "lower",
+        "color-hex-length": "long",
+
+        "media-feature-colon-space-after": [
+          "always",
+          {
+            "message": "В @media после «:» пробелы необходимы"
+          }
+        ],
+        "media-feature-colon-space-before": [
+          "never",
+          {
+            "message": "В @media перед «:» пробелов быть не должно"
+          }
+        ],
+        "media-feature-name-case": [
+          "lower",
+          {
+            "message": "Строчные буквы использовать следует"
+          }
+        ],
+        "media-feature-name-no-vendor-prefix": [
+          true,
+          {
+            "message": "Использовать вендорные префиксы не следует",
+            "severity": "warning"
+          }
+        ],
+        "media-feature-range-operator-space-after": [
+          "always",
+          {
+            "message": "Пробел после оператора диапазона ставить следует"
+          }
+        ],
+        "media-feature-range-operator-space-before": [
+          "always",
+          {
+            "message": "Пробел перед оператором диапазона ставить следует"
+          }
+        ],
+        "media-query-list-comma-newline-after": "always-multi-line",
+        "media-query-list-comma-newline-before": "never-multi-line",
+        "media-query-list-comma-space-after": "always-single-line",
+        "media-query-list-comma-space-before": "never-single-line",
+        "media-feature-parentheses-space-inside": [
+          "never",
+          {
+            "message": "Пробелы после «(» и перед «)» нельзя использовать"
+          }
+        ],
+
+        "no-duplicate-selectors": [
+          true,
+          {
+            "message": "Повторное написание селектора"
+          }
+        ],
+        "selector-class-pattern": null,
+        "selector-type-case": [
+          "lower",
+          {
+            "message": "Селекторы буквами строчными набирать следует"
+          }
+        ],
+        "selector-max-empty-lines": [
+          0,
+          {
+            "message": "Пустые строки в селекторах недопустимы"
+          }
+        ],
+
+        "block-opening-brace-space-before": [
+          "always",
+          {
+            "message": "Перед «{» один пробел нужен"
+          }
+        ],
+        "block-closing-brace-empty-line-before": [
+          "never",
+          {
+            "message": "Перед «}» пустой строки быть не должно"
+          }
+        ],
+        "block-closing-brace-newline-after": [
+          "always",
+          {
+            "message": "После «}» переносу строки быть должно"
+          }
+        ],
+        "block-closing-brace-newline-before": [
+          "always",
+          {
+            "message": "Перед «}» переносу строки быть должно"
+          }
+        ],
+        "block-no-empty": [
+          true,
+          {
+            "message": "Пустые блоки писать не следует"
+          }
+        ],
+        "block-opening-brace-newline-after": [
+          "always",
+          {
+            "message": "После «{» перенос строки быть должен"
+          }
+        ],
+
+        "declaration-no-important": [
+          true,
+          {
+            "message": "!important с опаской применять следует",
+            "severity": "warning"
+          }
+        ],
+        "declaration-block-semicolon-newline-after": [
+          "always",
+          {
+            "message": "После точки с запятой строки перенос необходим"
+          }
+        ],
+        "declaration-block-single-line-max-declarations": [
+          1,
+          {
+            "message": "На строке одной правилу одному место есть только"
+          }
+        ],
+        "declaration-block-trailing-semicolon": [
+          "always",
+          {
+            "message": "Свойство каждое точкой с запятой заканчивать хочешь ты"
+          }
+        ],
+        "declaration-block-no-duplicate-properties": [
+          true,
+          {
+            "message": "Правила повторять не следует"
+          }
+        ],
+        "declaration-colon-space-after": [
+          "always-single-line",
+          {
+            "message": "Правило задавая, один пробел после двоеточия ставь"
+          }
+        ],
+        "declaration-colon-space-before": [
+          "never",
+          {
+            "message": "Правило задавая, пробел перед двоеточием не используй"
+          }
+        ]
+      }
+    }
+  ]
+}

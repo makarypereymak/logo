@@ -1,0 +1,37 @@
+.breadcrumbs {
+  display: flex;
+  margin-top: 22px;
+
+  @media (min-width: 1200px) {
+    margin-top: 15px;
+  }
+}
+
+.breadcrumbs__item {
+  margin-right: 26px;
+}
+
+.breadcrumbs__link {
+  color: #9f9f9f;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: #000000;
+}
+
+.breadcrumbs__item:hover .breadcrumbs__link {
+  color: #000000;
+}
+
+.breadcrumbs__item:not(:last-child) {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: -16px;
+    content: "/";
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "scss.validate": false,
+  "css.validate": false,
+  "less.validate": false,
+  "stylelint.validate": ["css", "scss", "less"],
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+
+  "html.format.wrapAttributes": "force-expand-multiline"
+}
